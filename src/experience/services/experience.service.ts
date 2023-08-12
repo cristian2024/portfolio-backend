@@ -18,7 +18,7 @@ export class ExperienceService {
   }
 
   async create(createExperienceDto: CreateExperienceDTO): Promise<Experience> {
-    const createdCat = new this.experienceModel(createExperienceDto);
-    return createdCat.save();
+    const createdExperience = new this.experienceModel(createExperienceDto);
+    return createdExperience.save();
   }
 }

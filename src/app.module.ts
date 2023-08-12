@@ -1,3 +1,4 @@
+import { SkillsModule } from './skills/skills.module';
 import { ExperienceModule } from './experience/modules/experience.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -14,6 +15,7 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
+    SkillsModule,
     ConfigModule.forRoot({
       envFilePath: environments[process.env.NODE_ENV] ?? '.env',
       load: [config],
